@@ -12,7 +12,7 @@ export default function Navbar() {
             </div>
 
             <div className="search-bar">
-                <form action="/searchBook" method="GET">
+                <form action="" method="GET">
                     <input type="text" id="bookTitle" name="bookTitle" placeholder="Titre du livre" />
                     <button type="submit" className="search-icon">
                         <img src="search-icon.png" alt="search" width="20" height="20" />
@@ -20,8 +20,8 @@ export default function Navbar() {
                 </form>
             </div>
             <ol>
-                <li><a className="titre" href="/e-books">E-book</a></li>
-                <li><a className="titre" href="/e-books">Ouvrage papier</a></li>
+                <li><a className="titre" href="/">E-book</a></li>
+                <li><a className="titre" href="/">Ouvrage papier</a></li>
                 <div className="profile-menu">
                     <li><img src="user.png" className="profile-icon" alt="profil" /></li>
                     <div class="menu">

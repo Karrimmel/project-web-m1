@@ -17,23 +17,23 @@ export default function Footer() {
                     <ul className="box">
                         <li className="link_name">Company</li>
                         <li><a href="/index-connected">Home</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="apropos">About us</a></li>
-                        <li><a href="#">Get started</a></li>
+                        <li><a href="/">Contact us</a></li>
+                        <li><a href="/">About us</a></li>
+                        <li><a href="/">Get started</a></li>
                     </ul>
                     <ul className="box">
                         <li className="link_name">Services</li>
-                        <li><a href="#">App design</a></li>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Logo design</a></li>
-                        <li><a href="#">Banner design</a></li>
+                        <li><a href="/">App design</a></li>
+                        <li><a href="/">Web design</a></li>
+                        <li><a href="/">Logo design</a></li>
+                        <li><a href="/">Banner design</a></li>
                     </ul>
                     <ul className="box">
                         <li className="link_name">Account</li>
-                        <li><a href="">Profile</a></li>
-                        <li><a href="">My account</a></li>
-                        <li><a href="#">Preferences</a></li>
-                        <li><a href="#">Purchase</a></li>
+                        <li><a href="/">Profile</a></li>
+                        <li><a href="/">My account</a></li>
+                        <li><a href="/">Preferences</a></li>
+                        <li><a href="/">Purchase</a></li>
                     </ul>
                     <ul className="box input-box">
                         <li className="link_name">Subscribe</li>
@@ -44,10 +44,10 @@ export default function Footer() {
             </div>
             <div className="bottom-details">
                 <div className="bottom_text">
-                    <span className="copyright_text">Copyright © 2021 <a href="#">CodingLab.</a>All rights reserved</span>
+                    <span className="copyright_text">Copyright © 2021 <a href="/">CodingLab.</a>All rights reserved</span>
                     <span className="policy_terms">
-                        <a href="#">Privacy policy</a>
-                        <a href="#">Terms & condition</a>
+                        <a href="/">Privacy policy</a>
+                        <a href="/">Terms & condition</a>
                     </span>
                 </div>
             </div>

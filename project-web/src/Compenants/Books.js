@@ -29,7 +29,7 @@ export default  function Books() {
                   <h2 className="card__title">Dragon ball</h2>
                   <p className="card__description">Le manga raconte l'histoire de Son Goku, un garçon doté d'une queue de singe et d'une force incroyable. Il part à la recherche des sept boules de cristal magiques, appelées Dragon Balls, qui, une fois rassemblées, invoquent le dragon Shenron capable d'exaucer n'importe quel vœu. Au fil de son aventure, Goku devient un combattant redoutable, affronte de nombreux adversaires et découvre ses origines extraterrestres.</p>
                 </div>
-                <a href="">
+                <a href="/">
                   <button className="card__button">Read more</button>
                 </a>
               </div>
@@ -41,7 +41,7 @@ export default  function Books() {
                   <h2 className="card__title">Bleach</h2>
                   <p className="card__description">Ichigo Kurosaki est un adolescent qui a la capacité de voir les esprits. Après une rencontre avec Rukia Kuchiki, une Shinigami (faucheuse d'âmes), ses pouvoirs sont transférés à Ichigo. Il devient alors un Shinigami remplaçant, chargé de protéger les vivants des esprits maléfiques et de guider les âmes défuntes vers l'au-delà. L'histoire suit ses combats contre les Hollows, les âmes perdues, et d'autres forces surnaturelles.</p>
                 </div>
-                <a href="">
+                <a href="/">
                   <button className="card__button">Read more</button>
                 </a>
               </div>
@@ -53,7 +53,7 @@ export default  function Books() {
                   <h2 className="card__title">Naruto</h2>
                   <p className="card__description">L'histoire tourne autour de Naruto Uzumaki, un jeune ninja orphelin qui rêve de devenir Hokage, le leader de son village. Rejeté par les habitants à cause du démon renard à neuf queues scellé en lui, Naruto cherche à gagner le respect et l'amour des autres. Tout au long de la série, il fait face à de nombreux défis, se lie d'amitié avec d'autres ninjas et découvre des secrets sur sa famille et son passé.</p>
                 </div>
-                <a href="">
+                <a href="/">
                   <button className="card__button">Read more</button>
                 </a>
               </div>
