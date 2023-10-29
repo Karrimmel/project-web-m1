@@ -1,0 +1,133 @@
+body {
+    background-color: #353d980a;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jacques Francois';
+  }
+  
+  nav {
+      display: flex;
+      width: 100%;
+      position: relative;
+      justify-content: space-between;
+      text-align: center;
+      padding: 15px 30px;
+    }
+    
+    nav .logo {
+      cursor: pointer;
+    }
+    
+    .profile-menu {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .menu {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      right: 0;
+      top: 20px;
+    }
+    
+    .menu a {
+      color:  rgba(39, 45, 111, 0.65);;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .profile-menu:hover .menu {
+      display: block;
+    }
+    
+    nav .profile-icon{
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin-left: 30px;
+    }
+    
+    nav .search-bar input {
+      border: none;
+      outline: none;
+      background-color: #353d980a;
+      height: 100%;
+      width: 97%;
+      padding: 0 20px;
+      font-size: 15px;
+      text-indent: 25px; /* Déplacer le curseur d'écriture*/
+      text-align: left;
+      border-radius: 15px;
+    }
+    
+    nav .search-bar span {
+      position: absolute;
+      left: 10px; /* Déplacer l'icône vers la gauche */
+      cursor: pointer;
+      z-index: 1;
+    }
+    
+    nav .search-bar input::placeholder {
+      color: #353d9847; /* Couleur du texte */
+      padding-left: 5px; /* Décalage vers la droite */
+    }
+    
+    .search-bar form {
+      position: relative; /* Ajout de la position relative pour contenir l'icône */
+      align-items: center; /* Pour centrer l'icône verticalement */
+      background: rgba(53, 62, 152, 0.29);
+      border-radius: 15px;
+      width: 614px;
+      height: 41px;
+      margin-top: 30px;
+      display: flex;
+      align-items: center; /* Aligns items vertically in the center */
+      gap: 10px; /* Adds a gap of 10 pixels between the input field and the button */
+    }
+    
+    
+    .search-icon {
+      background: none;
+      border: none;
+      width: 9%;
+    }
+    
+    .search-icon:focus {
+      outline: none;
+    }
+    
+    nav ol {
+      display: flex;
+      list-style: none;
+      margin: auto 0;
+    }
+    
+    nav ol li {
+      margin: 0 2px;
+    }
+    
+    nav ol li a {
+      color: black;
+      font-size: 15px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      padding: 5px 30px;
+    }
+    
+    nav ol li:hover a {
+      color: rgba(53, 61, 152, 0.787);
+    }
+  
+  
+  
+    
+    
