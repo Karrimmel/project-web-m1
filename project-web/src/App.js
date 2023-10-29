@@ -1,6 +1,9 @@
 import Books from './Compenants/Books';
 import {createBrowserRouter,RouterProvider } from 'react-router-dom';
+import { ApolloProvider } from '@apollo/client';
+import client from './config/apolloClient';
 import './App.css';
+
 
 const route = createBrowserRouter([
   {
@@ -11,7 +14,9 @@ const route = createBrowserRouter([
 
 export default function App() {
   return (
-    <RouterProvider router={route} />
+    <ApolloProvider client={client}>
+      <RouterProvider router={route} />
+    </ApolloProvider>
   );
 }
 
