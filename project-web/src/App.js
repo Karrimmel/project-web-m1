@@ -7,6 +7,7 @@ import './App.css'; // Stylesheet for the App component
 import Book from './Compenants/Book';
 import Ebooks from './Compenants/Ebooks';
 import LoginPage from './Compenants/login';
+import RegisterPage from './Compenants/registration';
 
 // Creating a router with predefined routes for the application
 const route = createBrowserRouter([
@@ -30,6 +31,11 @@ const route = createBrowserRouter([
     // Route for the ebooks page, which will render the Ebooks component
     path: "/login",
     element: <LoginPage/>,
+  },
+  {
+    // Route for the ebooks page, which will render the Ebooks component
+    path: "/Register",
+    element: <RegisterPage/>,
   },
   {
     // Route for filtering ebooks by genre, which will also render the Ebooks component

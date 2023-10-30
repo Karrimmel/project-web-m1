@@ -92,7 +92,7 @@ export default function Navbar() {
                   <div className="menu">
                       {/* Links to account creation and login pages */}
                       <Link to="/Login">Sign in</Link>
-                      <Link to="/">Sign on</Link>      
+                      <Link to="/Register">Register</Link>      
                   </div>
               </div>
           </ol>
