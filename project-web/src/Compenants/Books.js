@@ -3,6 +3,7 @@ import './css/Books.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { useQuery, gql } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
 const GET_MANGAS = gql`
   query {
@@ -62,9 +63,9 @@ export default function Books() {
                   <h2 className="card__title">{manga.title.english || manga.title.native}</h2>
                   <p className="card__description">{manga.description}</p>
                 </div>
-                <a href="/book">
+                <Link to={`/book/${manga.id}`}>
                   <button className="card__button">Read more</button>
-                </a>
+                </Link>
               </div>
             </article>
           ))}
