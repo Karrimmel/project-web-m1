@@ -57,7 +57,7 @@ export default function Books() {
     return (
       <div className="spinner-container">
         <div className="spinner"></div>
-        <p className="loading-message">Chargement des données...</p>
+        <p className="loading-message">Loadgin...</p>
       </div>
     );
   }

@@ -1,3 +1,32 @@
+import React, { useState } from 'react';
+import { useQuery, gql } from '@apollo/client';
+import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import './css/Ebooks.css';
+
+const GET_GENRES = gql`
+  query GetGenres {
+    GenreCollection
+  }
+`;
+
+const GET_MANGAS_BY_GENRE = gql`
+  query GetMangasByGenre($genre: String) {
+    Page(page: 1, perPage: 21) {
+      media(type: MANGA, genre: $genre) {
+        id
+        title {
+          userPreferred
+        }
+        coverImage {
+          large
+        }
+      }
+    }
+  }
+`;
+
 /**
  * Ebooks component displays a list of manga genres and manga covers.
  * It allows users to filter mangas by genre.
@@ -17,7 +46,7 @@ export default function Ebooks() {
     return (
       <div className="spinner-container">
         <div className="spinner"></div>
-        <p className="loading-message">Chargement des données...</p>
+        <p className="loading-message">Loading...</p>
       </div>
     );
   }
