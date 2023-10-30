@@ -1,17 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './css/Navbar.css';
 
+/**
+ * Navbar component represents the navigation bar at the top of the page.
+ * It provides links to different sections of the website and includes a search bar.
+ */
 export default function Navbar() {
   return (
     <div>
         <nav>
             <div className="logo">
-                <a href="/">
+                {/* Link to the home page */}
+                <Link to="/">
                     <img src="/Logo_Solution_Factory_2.png" alt="Logo La l'e-brairie" width="100" height="100" />
-                </a>
+                </Link>
             </div>
 
             <div className="search-bar">
+                {/* Search form */}
                 <form action="" method="GET">
                     <input type="text" id="bookTitle" name="bookTitle" placeholder="Titre du livre" />
                     <button type="submit" className="search-icon">
@@ -20,13 +27,15 @@ export default function Navbar() {
                 </form>
             </div>
             <ol>
-                <li><a className="titre" href="/e_book">E-book</a></li>
-                <li><a className="titre" href="/e_book">Ouvrage papier</a></li>
+                {/* Navigation links */}
+                <li><Link className="titre" to="/e_book">E-book</Link></li>
+                <li><Link className="titre" to="/e_book">Ouvrage papier</Link></li>
                 <div className="profile-menu">
                     <li><img src="/user.png" className="profile-icon" alt="profil" /></li>
-                    <div class="menu">
-                        <a href="register" >Se créer un compte</a>
-                        <a href="login">Se connecter</a>      
+                    <div className="menu">
+                        {/* Links to account creation and login pages */}
+                        <Link to="/register">Se créer un compte</Link>
+                        <Link to="/login">Se connecter</Link>      
                     </div>
                 </div>
             </ol>
