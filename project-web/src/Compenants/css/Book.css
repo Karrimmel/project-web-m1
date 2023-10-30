@@ -134,16 +134,17 @@ button{
 }
 
 .spinner-container {
-  position: fixed; /* ou `absolute` si vous voulez le centrer dans un conteneur spécifique */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
+  flex-direction: column; /* Ajout pour organiser verticalement */
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.7); /* Optionnel: couleur de fond semi-transparente */
-  z-index: 1000; /* Assurez-vous que le spinner est au-dessus des autres éléments */
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
 }
 
 .spinner {
@@ -153,6 +154,12 @@ button{
   border-radius: 50%;
   border-left-color: #09f;
   animation: spin 1s linear infinite;
+}
+
+.loading-message {
+  margin-top: 20px; /* Ajoutez de l'espace entre le spinner et le message */
+  color: #666; /* Couleur du texte */
+  font-size: 16px; /* Taille du texte */
 }
 
 @keyframes spin {

@@ -34,7 +34,14 @@ export default function Book() {
     variables: { id: mangaId },
   });
 
-  if (loading) return <div className="spinner-container"><div className="spinner"></div></div>;
+  if (loading) {
+    return (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+        <p className="loading-message">Chargement des données...</p>
+      </div>
+    );
+  }
   if (error) return <p>Error: {error.message}</p>;
 
 
