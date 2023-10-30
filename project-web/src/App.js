@@ -6,6 +6,7 @@ import client from './config/apolloClient'; // Apollo Client for GraphQL API int
 import './App.css'; // Stylesheet for the App component
 import Book from './Compenants/Book';
 import Ebooks from './Compenants/Ebooks';
+import LoginPage from './Compenants/login';
 
 // Creating a router with predefined routes for the application
 const route = createBrowserRouter([
@@ -24,6 +25,11 @@ const route = createBrowserRouter([
     // Route for the ebooks page, which will render the Ebooks component
     path: "/e_book",
     element: <Ebooks />,
+  },
+  {
+    // Route for the ebooks page, which will render the Ebooks component
+    path: "/login",
+    element: <LoginPage/>,
   },
   {
     // Route for filtering ebooks by genre, which will also render the Ebooks component
