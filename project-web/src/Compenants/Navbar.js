@@ -91,8 +91,8 @@ export default function Navbar() {
                   <li><img src="/user.png" className="profile-icon" alt="profil" /></li>
                   <div className="menu">
                       {/* Links to account creation and login pages */}
-                      <Link to="/register">Sign in</Link>
-                      <Link to="/login">Sign on</Link>      
+                      <Link to="/">Sign in</Link>
+                      <Link to="/">Sign on</Link>      
                   </div>
               </div>
           </ol>
