@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="content">
                 <div className="top">
                     <div className="logo-details">
-                        <img src="./Logo_Solution_Factory_2.png" alt="La l'e-brairie" width="100" height="100" />
+                        <img src="/Logo_Solution_Factory_2.png" alt="La l'e-brairie" width="100" height="100" />
                         <div className="logo_name">La L'e-brairie</div>
                     </div>
                 </div>

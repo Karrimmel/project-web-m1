@@ -43,23 +43,23 @@ export default function Book() {
   return (
     <div>
         <Navbar />
-        <div class="containerBook">
-            <div class="Book">
+        <div className="containerBook">
+            <div className="Book">
                 <img src={manga.coverImage.extraLarge} alt={`Cover of ${manga.title.english}`}/>
             </div>
             <div>
-                <div class="Name">
+                <div className="Name">
                     <div>
-                        <div class="title-and-author">
-                            <p class="title">{manga.title.english || manga.title.native}</p>
-                            <p class="author"></p>
+                        <div className="title-and-author">
+                            <p className="title">{manga.title.english || manga.title.native}</p>
+                            <p className="author"></p>
                         </div>
-                        <div class="rating">
-                            <p class="note">Note : {manga.averageScore}/100</p>
+                        <div className="rating">
+                            <p className="note">Note : {manga.averageScore}/100</p>
                         </div>
                     </div>
                 </div>
-                <div class="resume">
+                <div className="resume">
                     <p>{manga.description}</p>
                 </div>
             </div>

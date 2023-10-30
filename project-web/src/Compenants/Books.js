@@ -82,9 +82,9 @@ export default function Books() {
                   <h2 className="card__title">{manga.title.english || manga.title.native}</h2>
                   <p className="card__description">{manga.description}</p>
                 </div>
-                <a href={`/book/${manga.id}`}>
+                <Link to={`/book/${manga.id}`}>
                   <button className="card__button">Read more</button>
-                </a>
+                </Link>
               </div>
             </article>
           ))}
