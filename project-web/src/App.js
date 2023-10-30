@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/client';
 import client from './config/apolloClient';
 import './App.css';
 import Book from './Compenants/Book';
+import Ebooks from './Compenants/Ebooks';
 
 
 
@@ -15,6 +16,10 @@ const route = createBrowserRouter([
   {
       path:"/book/:id",
       element: <Book />,
+  },
+  {
+     path:"/e_book",
+     element: <Ebooks />,
   }
 ])
 

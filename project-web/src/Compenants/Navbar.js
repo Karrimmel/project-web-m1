@@ -20,7 +20,7 @@ export default function Navbar() {
                 </form>
             </div>
             <ol>
-                <li><a className="titre" href="/">E-book</a></li>
+                <li><a className="titre" href="/e_book">E-book</a></li>
                 <li><a className="titre" href="/">Ouvrage papier</a></li>
                 <div className="profile-menu">
                     <li><img src="/user.png" className="profile-icon" alt="profil" /></li>
