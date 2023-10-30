@@ -14,7 +14,7 @@ const GET_GENRES = gql`
 
 const GET_MANGAS_BY_GENRE = gql`
   query GetMangasByGenre($genre: String) {
-    Page(page: 1, perPage: 10) {
+    Page(page: 1, perPage: 21) {
       media(type: MANGA, genre: $genre) {
         id
         title {
