@@ -11,7 +11,6 @@ const GET_GENRES = gql`
   }
 `;
 
-
 const GET_MANGAS_BY_GENRE = gql`
   query GetMangasByGenre($genre: String) {
     Page(page: 1, perPage: 21) {
@@ -29,11 +28,10 @@ const GET_MANGAS_BY_GENRE = gql`
 `;
 
 export default function Ebooks() {
-  const [selectedGenre, setSelectedGenre] = useState(null);
+  const [selectedGenre, setSelectedGenre] = useState('ALL'); // Utilisez 'ALL' pour indiquer tous les genres
   const { loading: loadingGenres, error: errorGenres, data: dataGenres } = useQuery(GET_GENRES);
   const { loading: loadingMangas, error: errorMangas, data: dataMangas } = useQuery(GET_MANGAS_BY_GENRE, {
-    variables: { genre: selectedGenre },
-    skip: !selectedGenre,
+    variables: { genre: selectedGenre === 'ALL' ? null : selectedGenre },
   });
 
   if (loadingGenres || loadingMangas) {
@@ -59,8 +57,8 @@ export default function Ebooks() {
                 <ul className="genre">
                     <h3>Genres</h3>
                     <div className="list">
-                        <li><Link to="/e_book" onClick={() => handleGenreClick(null)}>Tous</Link></li>
-                        {dataGenres.GenreCollection.map((genre, index) => (
+                        <li><Link to="/e_book" onClick={() => handleGenreClick('ALL')}>Tous</Link></li>
+                        {dataGenres && dataGenres.GenreCollection.map((genre, index) => (
                           <div className="list" key={index}>
                             <li>
                               <Link to={`/e_book/genre/${genre}`} onClick={() => handleGenreClick(genre)}>
@@ -77,7 +75,9 @@ export default function Ebooks() {
               {errorMangas && <p>Error loading mangas: {errorMangas.message}</p>}
               {dataMangas && dataMangas.Page.media.map((manga) => (
                   <div className="Book" key={manga.id}>
+                      <Link to={`/book/${manga.id}`}>
                           <img src={manga.coverImage.large} alt={manga.title.userPreferred} />
+                      </Link>
                   </div>
               ))}
           </div>
