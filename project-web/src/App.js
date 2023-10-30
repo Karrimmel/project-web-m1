@@ -28,12 +28,12 @@ const route = createBrowserRouter([
     element: <Ebooks />,
   },
   {
-    // Route for the ebooks page, which will render the Ebooks component
+    // Route for the Login page, which will render the login component
     path: "/login",
     element: <LoginPage/>,
   },
   {
-    // Route for the ebooks page, which will render the Ebooks component
+    // Route for the ebooks page, which will render the register component
     path: "/Register",
     element: <RegisterPage/>,
   },
