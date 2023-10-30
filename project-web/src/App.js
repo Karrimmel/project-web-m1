@@ -20,6 +20,10 @@ const route = createBrowserRouter([
   {
      path:"/e_book",
      element: <Ebooks />,
+  },
+  {
+      path:"/e_book/genre/:genrename",
+      element:<Ebooks />,
   }
 ])
 
