@@ -46,7 +46,7 @@ export default function Books() {
   const { loading: loadingMangas, error: errorMangas, data: dataMangas } = useQuery(GET_MANGAS);
   const { loading: loadingBest, error: errorBest, data: dataBest } = useQuery(GET_BEST_MANGA);
 
-  if (loadingMangas || loadingBest) return <p>Loading...</p>;
+  if (loadingMangas || loadingBest) return <div className="spinner-container"><div className="spinner"></div></div>;
   if (errorMangas || errorBest) return <p>Error: {(errorMangas || errorBest).message}</p>;
 
   return (
