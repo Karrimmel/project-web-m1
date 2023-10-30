@@ -49,6 +49,10 @@ export default function Ebooks() {
     setSelectedGenre(genre);
   };
 
+  const filteredGenres = dataGenres ? dataGenres.GenreCollection.filter(
+    (genre) => genre !== 'Hentai' && genre !== 'Ecchi'
+  ) : [];
+
   return (
     <div>
         <Navbar />
@@ -58,7 +62,7 @@ export default function Ebooks() {
                     <h3>Genres</h3>
                     <div className="list">
                         <li><Link to="/e_book" onClick={() => handleGenreClick('ALL')}>Tous</Link></li>
-                        {dataGenres && dataGenres.GenreCollection.map((genre, index) => (
+                        {filteredGenres.map((genre, index) => (
                           <div className="list" key={index}>
                             <li>
                               <Link to={`/e_book/genre/${genre}`} onClick={() => handleGenreClick(genre)}>
