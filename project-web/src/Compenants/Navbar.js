@@ -29,13 +29,13 @@ export default function Navbar() {
             <ol>
                 {/* Navigation links */}
                 <li><Link className="titre" to="/e_book">E-book</Link></li>
-                <li><Link className="titre" to="/e_book">Ouvrage papier</Link></li>
+                <li><Link className="titre" to="/e_book">Paper Trade</Link></li>
                 <div className="profile-menu">
                     <li><img src="/user.png" className="profile-icon" alt="profil" /></li>
                     <div className="menu">
                         {/* Links to account creation and login pages */}
-                        <Link to="/register">Se créer un compte</Link>
-                        <Link to="/login">Se connecter</Link>      
+                        <Link to="/register">Sign in</Link>
+                        <Link to="/login">Sign on</Link>      
                     </div>
                 </div>
             </ol>

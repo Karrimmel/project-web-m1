@@ -57,7 +57,7 @@ export default function Books() {
     return (
       <div className="spinner-container">
         <div className="spinner"></div>
-        <p className="loading-message">Loadgin...</p>
+        <p className="loading-message">Loading...</p>
       </div>
     );
   }
@@ -68,7 +68,7 @@ export default function Books() {
   return (
     <div>
       <Navbar />
-      <h2 className="titre">Nouveautés</h2>
+      <h2 className="titre">New</h2>
       <div className="container">
         <div className="row">
           {/* Map through the list of mangas and display their information */}
@@ -89,7 +89,7 @@ export default function Books() {
           ))}
         </div>
       </div>
-      <h2 className="titre">Mieux Notés</h2> 
+      <h2 className="titre">Best</h2> 
       <div className="container">
         <div className="row">
           {/* Map through the list of best-rated mangas and display their information */}
