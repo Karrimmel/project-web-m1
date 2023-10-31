@@ -1,42 +1,48 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './css/Login.css';
 
+/**
+ * LoginPage component renders the login form for the application.
+ */
 export default function LoginPage() {
     return (
       <div>
-        <a href="/">
+        {/* Link to the home page */}
+        <Link to="/">
           <h1>
             <img src="/Logo_Solution_Factory_2.png" alt="Logo La l'e-brairie" />
           </h1>
-        </a>
+        </Link>
         <div className="formlogin">
-          <form action="/auth/login" method="POST">
+          {/* The form should be handled by your backend server on submission */}
+          <form action="" method="POST">
             {/* Headings for the form */}
             <div className="headingsContainer">
-              <p>Bienvenue</p>
+              <p>Welcome</p>
             </div>
   
             {/* Main container for all inputs */}
             <div className="mainContainer">
-              {/* Username */}
+              {/* Email input */}
               <label htmlFor="Email">E-mail :</label>
-              <input type="text" placeholder="Entrez Email" id="Email" name="Email" required />
+              <input type="text" placeholder="Enter E-mail" id="Email" name="Email" required />
               <br /><br />
   
-              {/* Password */}
-              <label htmlFor="Pswrd">Mot de passe :</label>
-              <input type="password" placeholder="Entrez mot de passe" id="Pswrd" name="Pswrd" required />
+              {/* Password input */}
+              <label htmlFor="Pswrd">Password :</label>
+              <input type="password" placeholder="Enter Password" id="Pswrd" name="Pswrd" required />
   
               {/* Submit button */}
-              <button type="submit">Se connecter</button>
+              <button type="submit">Log in</button>
   
               {/* Sign up link */}
-              <p className="">Pas de compte? <a href="register">Se créer un compte!</a></p>
-              <a href="/"><p className="">Retour à l'accueil</p></a>
+              <p className="">You don't have an account ?<Link to="/register">Create a account !</Link></p>
+              {/* Link back to the home page */}
+              <Link to="/"><p className="">Back to the homepage</p></Link>
             </div>
           </form>
         </div>
-        {/* Use conditional rendering for the message */}
-        
       </div>
     );
-  }
+}

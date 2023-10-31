@@ -69,14 +69,7 @@ export default function Navbar() {
                 {/* Search form that calls handleSearchSubmit on submit */}
                 <form onSubmit={handleSearchSubmit}>
                     {/* Input field for the search term, with value bound to the search state */}
-                    <input
-                      type="text"
-                      id="bookTitle"
-                      name="bookTitle"
-                      placeholder="Titre du livre"
-                      value={search}
-                      onChange={handleSearchChange}
-                    />
+                    <input type="text" id="bookTitle" name="bookTitle" placeholder="Title" value={search} onChange={handleSearchChange} />
                     {/* Submit button for the search form */}
                     <button type="submit" className="search-icon">
                         <img src="/search-icon.png" alt="search" width="20" height="20" />
@@ -91,7 +84,7 @@ export default function Navbar() {
                   <li><img src="/user.png" className="profile-icon" alt="profil" /></li>
                   <div className="menu">
                       {/* Links to account creation and login pages */}
-                      <Link to="/Login">Sign in</Link>
+                      <Link to="/Login">Log in</Link>
                       <Link to="/Register">Register</Link>      
                   </div>
               </div>

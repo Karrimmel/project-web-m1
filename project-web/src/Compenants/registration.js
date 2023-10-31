@@ -1,61 +1,69 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './css/Login.css';
 
+/**
+ * RegisterPage component renders the registration form for new users.
+ */
 export default function RegisterPage() {
     return (
         <div>
-        {/* Your HTML content goes here */}
-        <a href="/">
+        {/* Link to the home page */}
+        <Link to="/">
           <h1>
             <img src="/Logo_Solution_Factory_2.png" alt="Logo La l'e-brairie" />
           </h1>
-        </a>
+        </Link>
         <div className="formlogin">
+          {/* The form should be handled by your backend server on submission */}
           <form action="/auth/register" method="POST">
             {/* Headings for the form */}
             <div className="headingsContainer">
-              <p>Bienvenue</p>
+              <p>Welcome</p>
             </div>
   
             {/* Main container for all inputs */}
             <div className="mainContainer">
-              {/* Username */}
-              <label htmlFor="Lname">Nom :</label>
-              <input type="text" placeholder="Entrez Nom" id="Lname" name="Lname" required />
+              {/* Name input */}
+              <label htmlFor="Lname">Name :</label>
+              <input type="text" placeholder="Enter Name" id="Lname" name="Lname" required />
               <br /><br />
   
-              {/* Password */}
-              <label htmlFor="Fname">Prénom :</label>
-              <input type="text" placeholder="Entrez Prénom" id="Fname" name="Fname" required />
+              {/* First name input */}
+              <label htmlFor="Fname">Firstname :</label>
+              <input type="text" placeholder="Enter Firstname" id="Fname" name="Fname" required />
               <br /><br />
   
-              {/* Email */}
+              {/* Email input */}
               <label htmlFor="Email">E-mail :</label>
-              <input type="text" placeholder="Entrez Email" id="Email" name="Email" required />
+              <input type="text" placeholder="Enter E-mail" id="Email" name="Email" required />
               <br /><br />
   
-              {/* Phone Number */}
-              <label htmlFor="Pnumber">Téléphone :</label>
-              <input type="text" placeholder="Entrez téléphone" id="Pnumber" name="Pnumber" required />
+              {/* Phone number input */}
+              <label htmlFor="Pnumber">Phonenumber :</label>
+              <input type="text" placeholder="Enter Phonenumber" id="Pnumber" name="Pnumber" required />
               <br /><br />
   
-              {/* Password */}
-              <label htmlFor="Pswrd">Mot de passe :</label>
-              <input type="password" placeholder="Entrez mot de passe" id="Pswrd" name="Pswrd" required />
+              {/* Password input */}
+              <label htmlFor="Pswrd">Password :</label>
+              <input type="password" placeholder="Enter Password" id="Pswrd" name="Pswrd" required />
               <br /><br />
   
-              {/* Confirm Password */}
-              <label htmlFor="Cpswrd">Confirmer mot de passe :</label>
-              <input type="password" placeholder="Entrez mot de passe" id="Cpswrd" name="Cpswrd" required />
+              {/* Confirm password input */}
+              <label htmlFor="Cpswrd">Confirm Password :</label>
+              <input type="password" placeholder="Enter Password" id="Cpswrd" name="Cpswrd" required />
   
               {/* Submit button */}
-              <button type="submit" id="btn">Créer</button>
+              <button type="submit" id="btn">Create</button>
   
-              <p className="">Vous avez déjà un compte ? <a href="login">Se connecter</a></p>
-              <a href="/"><p className="">Retour à l'accueil</p></a>
+              {/* Link to the login page */}
+              <p className="">Already have a account ? <Link to="/login">Log in</Link></p>
+              {/* Link back to the home page */}
+              <Link to="/"><p className="">Back to the homepage</p></Link>
             </div>
           </form>
         </div>
        
       </div>
     );
-  }
+}
